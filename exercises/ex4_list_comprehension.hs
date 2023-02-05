@@ -5,6 +5,14 @@ the first one hundred integer squares:
 1^2 + 2^2 + 3^2 + … + 100^2
 -}
 sumHundredIntSquares = [x^2 | x <- [1..100]]
+-- can adapt list to increment through odd numbers
+sumHundredOddIntSquares = [x^2 | x <- [1,3..100]]
+-- or:
+sumHundredOddIntSquares' = [x^2 | x <- [1..100], x `mod` 2 /= 0]
+-- can specify multiple
+sumHundredMultipleSquares = [x^2 | x <- [1..100], x `mod` 5 == 0]
+-- can use pairs to make calculations clear
+aaa' = [(x,y^2) | y <- [1..100], x <- [y], x `mod` 5 == 0]
 
 {-
 2. The library function
