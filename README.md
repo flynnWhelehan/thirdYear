@@ -1,5 +1,5 @@
 # functionalProgramming
-Mostly lab work from my univeristy functional programming module.
+Mostly lab work from my university functional programming module.
 
 Books:
 
