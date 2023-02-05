@@ -1,9 +1,11 @@
-{-
-Exercises
+-- Exercise Sheet 4
+
+{- 
 1. Using list comprehension, give an expression that calculates the sum of
 the first one hundred integer squares:
 1^2 + 2^2 + 3^2 + … + 100^2
 -}
+-- Answer
 sumHundredIntSquares = [x^2 | x <- [1..100]]
 -- can adapt list to increment through odd numbers
 sumHundredOddIntSquares = [x^2 | x <- [1,3..100]]
@@ -23,3 +25,8 @@ replicate 3 True = [True,True,True]
 
 Use list comprehension to define replicate.
 -}
+-- answer
+-- The wildcard _ is used instead of an index variable.
+-- It says: 
+{- result = a list of x, where something (_) is 1 to n, which creates n copies of x -}
+listCompReplicate n x = [x | _ <- [1..n]]
