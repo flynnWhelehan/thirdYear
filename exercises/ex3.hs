@@ -4,7 +4,7 @@ Exercises
 the first one hundred integer squares:
 1^2 + 2^2 + 3^2 + … + 100^2
 -}
-
+sumHundredIntSquares = [x^2 | x <- [1..100]]
 
 {-
 2. The library function
