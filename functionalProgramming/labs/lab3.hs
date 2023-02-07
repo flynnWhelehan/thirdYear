@@ -18,6 +18,17 @@ that adds each pairs of integers together. For instance:
 > addpp [(1,2), (4,3), (2,7)]
 [3,9]
 -}
+-- a
+allEven :: [Int] -> Bool
+--allEven [] = True
+--allEven (x:xs) = even x && allEven xs
+-- or
+allEven = foldr (\x b -> even x && b) True
+{- The lambda abstraction \x b -> even x && b is of type Int -> Bool -> Bool; i.e., 
+its first and second argument have different types, but its result type coincides with the type of the second argument. T-}
+
+--b
+
 
 {-
 3. A triple (x, y, z) of positive integers is called pythagorean if x2 + y2 = z2. Using a list comprehension, define a function
