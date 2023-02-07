@@ -1,4 +1,4 @@
--- lab 4
+-- lab 2 (wk 4)
 {-
 1. What are the types of the following
 (a) values:
