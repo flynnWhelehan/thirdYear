@@ -1,4 +1,4 @@
--- Lab 1
+-- Lab 1 (wk3)
 --1. N/A (Setting up)
 
 -- 2.

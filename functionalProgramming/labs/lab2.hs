@@ -1,4 +1,4 @@
--- lab 4
+-- lab 2 (wk 4)
 {-
 1. What are the types of the following
 (a) values:
@@ -31,7 +31,7 @@ doubleAll [] = []
 doubleAll (x:xs) = [x * 2] ++ doubleAll xs 
 
 isEven :: Integer -> Bool
-isEven x = ((x `mod` 2) == 0)
+isEven x = (x `mod` 2) == 0
 
 halve :: [a] -> ([a], [a])
 halve xs = let len = length xs
