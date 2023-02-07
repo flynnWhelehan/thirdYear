@@ -28,7 +28,12 @@ allEven = foldr (\x b -> even x && b) True
 its first and second argument have different types, but its result type coincides with the type of the second argument. T-}
 
 --b
+addpp :: [(Int,Int)] -> [Int]
+addpp pairs = [m + n | (m, n) <- pairs]
 
+--c
+addppmlessn :: [(Int,Int)] -> [Int]
+addppmlessn pairs = [m + n | (m, n) <- pairs, m < n]
 
 {-
 3. A triple (x, y, z) of positive integers is called pythagorean if x2 + y2 = z2. Using a list comprehension, define a function
