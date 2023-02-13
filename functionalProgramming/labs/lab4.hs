@@ -37,7 +37,24 @@ msort' xs
     | otherwise = merge' (msort' left) (msort' right)
     where (left, right) = halve' xs
 
+-- 4. Function that uses map and filter rather than list-comprehension (see existing implementations):
+-- list comprehension version:
+some_function :: (a -> b) -> (a -> Bool) -> [a] -> [b]
+some_function f p xs = [f x | x <- xs, p x]
+-- map and filter version:
+map_and_filter :: (a -> b) -> (a -> Bool) -> [a] -> [b]
+map_and_filter f p xs = map f (filter p xs)
 
+{-
+The map function applies the function f to each element of the list xs, and returns a new list with the results. 
+The filter function returns a new list containing only the elements of xs that satisfy the predicate p. 
+The map_and_filter function first applies filter to xs to get a filtered list,
+    and then applies map to the filtered list to get the final list of mapped elements. 
+The resulting list is equivalent to the list comprehension [f x | x <- xs, p x].
 
+e.g. 
+map_and_filter (*2) (\x -> x > 4) [1, 2, 3, 4, 5, 6]
+each element is *2, but only on the filtered elements above 4
+-}
 
 
