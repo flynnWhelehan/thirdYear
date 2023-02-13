@@ -57,4 +57,19 @@ map_and_filter (*2) (\x -> x > 4) [1, 2, 3, 4, 5, 6]
 each element is *2, but only on the filtered elements above 4
 -}
 
+-- 5. Redefine map f and filter p using foldr
+map' :: (a -> b) -> [a] -> [b]
+map' f xs = foldr (\x acc -> f x : acc) [] xs
+filter' :: (a -> Bool) -> [a] -> [a]
+filter' p xs = foldr (\x acc -> if p x then x : acc else acc) [] xs
+{-
+The map' function applies f elements of the input list xs. 
+    It returns a new list with the results. 
+    foldr recursively builds output list by prepending the result of applying f to each element to the accumulator.
 
+The filter' function returns a new list containing only the elements of the input list xs that satisfy the predicate p. 
+    foldr recursively builds output list by appending elements that satisfy p to the accumulator, and skipping elements that do not.
+-}
+
+map_and_filter' :: (a -> b) -> (a -> Bool) -> [a] -> [b]
+map_and_filter' f p xs = map' f (filter' p xs)
