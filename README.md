@@ -1,4 +1,4 @@
 # Third year @ RHUL (out of 5)
-Mostly lab and exercise work from third year. 
+Mostly lab and exercise work from third year.
 
-See 'softwareVerification' repo for the second term module which is a two-person project.
+There is a discrete repo for the current term module 'softwareVerification', that is private. It is a two-person project on the Frama-C tool.  
