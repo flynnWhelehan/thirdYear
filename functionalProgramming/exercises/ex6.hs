@@ -23,8 +23,17 @@ that decides if one value in an ordered type is less than (LT), equal to
 (1) Using this function, redefine the function occurs for search trees, as
 defined in the above exercise.
 -}
-
+occurs' :: Ord a => a -> Tree a -> Bool
+occurs' x (Leaf y)  = x == y
+occurs' x (Node l y r) = case compare x y of
+    LT -> occurs' x l
+    EQ -> x == y
+    GT -> occurs' x r
 {-
 (2) Why is this new definition more efficient than the version defined in
 the above exercise?
+
+Answer: 
+Only requires one comparison of x and y for each node. 
+Exercise 1 may require two.
 -}
