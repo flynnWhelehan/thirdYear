@@ -72,5 +72,9 @@ respectively.)
   println(f.factors(10))
   println(f.prime(10))
   println(f.primes(10))
-  
+
   // Q3
+  println("Enter an integer: ")
+  val n = scala.io.StdIn.readInt()
+  println(f.primes(n))
+  
