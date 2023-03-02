@@ -1,0 +1,12 @@
+
+functionalProgramming/.metals/metals.lock.db
+
+*.db
+
+*.tasty
+
+*.log
+
+*.json
+
+*.class
