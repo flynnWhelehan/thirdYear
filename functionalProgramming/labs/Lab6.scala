@@ -1,17 +1,26 @@
-object Lab6 {
-    def main(args: Array[String]) = {
-    println("Hello, world!")
-    }
-}
 /* Q1
 (a) Make a class Employee with a name and salary. Override the
 toString method so that, when applied to an object e of Employee,
 it returns the string
 Employee[name=#1, salary=#2]
 where #1 and #2 are the name and the salary of e, respectively.
+*/
+class Employee(var name: String, var salary: Int):
+  override def toString: String = s"Employee[name=$name, salary=$salary]"
+end Employee
+
+@main def Lab6Main =
+  val e = Employee("Flynn", 24000)
+  println(e)
+
+/* Q1
 (b) Make a class Manager that extends Employee. Add an instance
 field, named department, of type String. Supply a method
 toString that prints the manager’s name, department, and salary.
+
+*/
+
+/* Q1
 (c) Make a class Executive that extends Manager. Supply the ap-
 propriate toString method.
 (d) Supply a test program that tests these classes and methods.
