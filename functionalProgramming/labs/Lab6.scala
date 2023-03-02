@@ -9,22 +9,33 @@ class Employee(var name: String, var salary: Int):
   override def toString: String = s"Employee[name=$name, salary=$salary]"
 end Employee
 
-@main def Lab6Main =
-  val e = Employee("Flynn", 24000)
-  println(e)
-
 /* Q1
 (b) Make a class Manager that extends Employee. Add an instance
 field, named department, of type String. Supply a method
 toString that prints the manager’s name, department, and salary.
-
 */
+class Manager(name: String, salary: Int, var department: String) extends Employee(name, salary):
+  override def toString: String = s"Manager[name=$name, department=$department, salary=$salary]"
+end Manager
 
 /* Q1
 (c) Make a class Executive that extends Manager. Supply the ap-
 propriate toString method.
+*/
+class Executive(name: String, salary: Int, department: String) extends Manager(name, salary, department):
+  override def toString: String = s"Executive[name=$name, department=$department, salary=$salary]"
+end Executive
+
+/* Q1 
 (d) Supply a test program that tests these classes and methods.
 */
+@main def Lab6Main =
+  val e = Employee("Flynn", 24000)
+  println(e)
+  val m = Manager("Flynn", 24000, "IT")
+  println(m)
+  val x = Executive("Flynn", 24000, "IT")
+  println(x)
 
 /* Q2
 Define the following functions in Scala and use its interpreter to test
