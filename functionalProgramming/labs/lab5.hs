@@ -1,5 +1,3 @@
-
-
 {-
 FP Lab 5
 1. 
@@ -7,10 +5,21 @@ FP Lab 5
 sum of two natural numbers using pattern-matching and recur-
 sion.
 -}
+{-
+Define custom data type Nat to represents natural numbers. 
+Nat has two constructors: 
+    Zero which represents 0
+    Succ, taking a Nat argument, represents the successor of that natural number
+The add function takes two (Nat) args x and y, and returns their sum as another Nat. 
+-}
 data Nat = Zero | Succ Nat
-
 add :: Nat -> Nat -> Nat
+-- If the x is Zero, return y (base case)
 add Zero y = y
+{-
+If the first argument is a successor Succ x, recursively add x and y:
+    Construct a new Nat using the Succ constructor to represent the successor of the sum of x and y (recursive case)
+-}
 add (Succ x) y = Succ (add x y)
 
 {-
