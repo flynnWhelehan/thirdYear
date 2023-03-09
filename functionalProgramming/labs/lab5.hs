@@ -61,10 +61,16 @@ balanced (Node left right) = abs (leaves left - leaves right) <= 1 && balanced l
 
 {-
 3. Define a function balance :: [Int] -> Tree that converts a non-
-empty list of integers into a balanced tree. (Hint: by using the function
-splitAt :: Int -> [a] -> ([a], [a]), first define a function that
-splits a list into two halves whose lengthes differ by at most one.)
+empty list of integers into a balanced tree. 
+(Hint: by using the function splitAt :: Int -> [a] -> ([a], [a]), 
+define a function that splits a list into two halves whose lengthes differ by at most one.)
 -}
+balance :: [Int] -> Tree
+balance [x] = Leaf x
+balance xs = Node (balance left) (balance right)
+    where
+        -- split the list into two halves, whose lengths differ by at most 1
+        (left, right) = splitAt (length xs `div` 2) xs
 
 {-
 4. (Hard and optional) Nim is a game that is played by two players on
@@ -78,8 +84,11 @@ up as follows:
 Two players take it in turn to remove one or more stars from the end
 of a single row. The winner is the player who removes the last star or
 stars from the board.
-Implement the game of nim in Haskell. (Hint: Represent the board as
-a list of five integers that give the number of stars remaining on each
-row. For example, the initial board is [5,4,3,2,1].)
+Implement the game of nim in Haskell. 
+(Hint: Represent the board as a list of five integers that 
+give the number of stars remaining on each row. 
+For example, the initial board is [5,4,3,2,1].)
 -}
+
+
 
