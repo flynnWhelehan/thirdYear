@@ -1,10 +1,10 @@
 Covers both theoretical and practical aspects of machine learning, with Python as the programming language.
 
 ## Learning outcomes
-Demonstrate knowledge of the theoretical background in machine learning methods.
-Have an understanding of the main advantages and limitations of various approaches to machine learning and specific machine-learning algorithms.
-Be able to implement versions of several machine-learning algorithms.
-Have an understanding of some ways to apply the ideas and algorithms of machine learning in industry, medicine and other fields.
+- Demonstrate knowledge of the theoretical background in machine learning methods.
+- Have an understanding of the main advantages and limitations of various approaches to machine learning and specific machine-learning algorithms.
+- Be able to implement versions of several machine-learning algorithms.
+- Have an understanding of some ways to apply the ideas and algorithms of machine learning in industry, medicine and other fields.
 
 ## Textbooks
 The main textbook for this course is:
