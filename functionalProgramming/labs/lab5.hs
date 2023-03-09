@@ -40,9 +40,24 @@ Such a tree is balanced if the number of leaves in the left and right
 subtrees of every node differs by at most one, with leaves themselves
 being trivially balanced.
 Define a function balanced :: Tree -> Bool that decides whether a
-tree is balanced. (Hint: first define a function that returns the number
-of leaves of a tree.)
+tree is balanced. 
+(Hint: first define a function that returns the number of leaves of a tree.)
 -}
+data Tree = Leaf Int | Node Tree Tree
+    -- generate a Show instance for Tree (so we can print it)
+    deriving (Show)
+balanced :: Tree -> Bool
+balanced (Leaf _) = True
+{-
+if difference between the number of leaves in the left and right subtrees is <= to 1:
+    recursively check if the left and right subtrees are balanced.
+-}
+balanced (Node left right) = abs (leaves left - leaves right) <= 1 && balanced left && balanced right
+    where
+        -- our function to count the number of leaves in a tree
+        leaves :: Tree -> Int
+        leaves (Leaf _) = 1
+        leaves (Node left right) = leaves left + leaves right
 
 {-
 3. Define a function balance :: [Int] -> Tree that converts a non-
