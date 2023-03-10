@@ -1,3 +1,14 @@
+- [Covers Chapters 3, 6, 9](#covers-chapters-3-6-9)
+  - [Chapter 3 - Conformal prediction](#chapter-3---conformal-prediction)
+    - [Idea of conformal prediction:](#idea-of-conformal-prediction)
+    - [Implementing conformal prediction](#implementing-conformal-prediction)
+    - [Conformal prediction with nearest neighbour](#conformal-prediction-with-nearest-neighbour)
+      - [Conformity measures for 1nn](#conformity-measures-for-1nn)
+      - [Nonconformity](#nonconformity)
+      - [Nearest neighbour regression](#nearest-neighbour-regression)
+    - [Measuring the efficiency of conformal predictors](#measuring-the-efficiency-of-conformal-predictors)
+
+
 # Covers Chapters 3, 6, 9
 ## Chapter 3 - Conformal prediction
 In mainstream machine learning the assumption is Independent Identically Distributed.

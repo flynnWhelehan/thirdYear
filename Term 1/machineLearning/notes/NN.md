@@ -1,3 +1,25 @@
+- [Chapter 8](#chapter-8)
+  - [Neural Networks](#neural-networks)
+    - [Basics](#basics)
+    - [Layers](#layers)
+    - [Strengths](#strengths)
+    - [Weaknesses](#weaknesses)
+  - [Maximum Margin Classifiers](#maximum-margin-classifiers)
+    - [Basics](#basics-1)
+    - [Hyperplanes](#hyperplanes)
+      - [Classifying samples using a hyperplane](#classifying-samples-using-a-hyperplane)
+    - [Constructing the maximum margin classifier](#constructing-the-maximum-margin-classifier)
+    - [Constructing the soft margin classifer](#constructing-the-soft-margin-classifer)
+- [what about the ones closest to margin in right class?](#what-about-the-ones-closest-to-margin-in-right-class)
+    - [Support vector machines](#support-vector-machines)
+      - [Uses of SVMs](#uses-of-svms)
+      - [Strengths of SVMs](#strengths-of-svms)
+      - [Weaknesses of SVMs](#weaknesses-of-svms)
+  - [SVMs on K-Classes](#svms-on-k-classes)
+    - [One vs One](#one-vs-one)
+    - [One vs Rest](#one-vs-rest)
+      - [Using One vs Rest with conformal prediction](#using-one-vs-rest-with-conformal-prediction)
+
 # Chapter 8
 ## Neural Networks
 ### Basics
